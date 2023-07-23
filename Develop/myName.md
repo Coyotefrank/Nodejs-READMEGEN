@@ -1,5 +1,5 @@
-# appened
-it is great
+# title
+description
 
 Table Of Content 
 
@@ -17,7 +17,8 @@ Table Of Content
 
 
 ## Installation
-
+To install all dependency's, run the command in your terminal:
+npm install
 
 ## Usage
 

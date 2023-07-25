@@ -9,19 +9,27 @@ const questions = [
     {
         type:"input",
         message:"what is the title of this project?",
-        name:"My project",
+        name:"title",
     },
     {
         type:"input",
         message:"describe this project",
-        name:"A generated readme",
+        name:"description",
     },
     {
         type:"list",
         message:"what is the license",
         name:"license",
-        choices:["MIT", "GPL3.0", "unlicense"]
+        choices:["MIT", "GPL3.0", "none"]
     },
+    {
+        type:"Input",
+        message:"what is your Git Hub user name?",
+        name:"github",
+        
+
+    },
+   
     
 ];
 
@@ -37,9 +45,29 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then(answers=>{
         console.log(answers)
+        console.log(answers.title)
         writeToFile("myName.md",generateMarkdown(answers))
     })
 }
 
 // Function call to initialize app
 init();
+
+
+
+// let myArray = []
+// let myArray2 = [1 , 2 , 3 , "string" , {key: "value"}]
+// myArray2.push(4)
+// let arrayLength = myArray2.length
+
+// let myObject = {
+//     color:"blue",
+//     year: 2020 ,
+
+//      drive() {
+//     console.log("drive")
+//     }
+// }
+
+// console.log(myObject.color)
+// console.log(myObject.drive())

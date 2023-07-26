@@ -29,7 +29,34 @@ const questions = [
         
 
     },
-   
+    
+    {
+        type:"Input",
+        message:"what is your email address?",
+        name:"email",
+        
+
+    },
+    {
+       type:"input",
+       message:"what does the user need to know about this readme?",
+       name:"usage"
+
+
+
+    },
+    {
+        type:"input",
+        message:"What command should be ran to run test?",
+        name:"test",
+        default:"npm test"
+    },
+    {
+        type: "input",
+        name: "contributing",
+        message: "What does the user need to know about contributing to the repo?",
+    },
+    
     
 ];
 
@@ -49,7 +76,7 @@ function init() {
         writeToFile("myName.md",generateMarkdown(answers))
     })
 }
-
+   
 // Function call to initialize app
 init();
 
